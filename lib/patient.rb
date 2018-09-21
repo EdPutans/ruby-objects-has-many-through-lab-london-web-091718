@@ -16,7 +16,7 @@ class Patient
 
   def new_appointment(date, doctor)
     #DO NOT TOUCH - first try
-    Appointment.new(self, date, doctor)
+    Appointment.new(self, doctor, date)
   end
 
 def appointments
@@ -24,8 +24,7 @@ def appointments
 end
 
 def doctors
-  #the test passes with Doctor.all   . literally.
-appointments.all.map {|app| app.appointment }
+  appointments.map {|app| app.doctor}
 end
 
 end

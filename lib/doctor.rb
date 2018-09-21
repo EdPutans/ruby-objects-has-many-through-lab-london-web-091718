@@ -26,6 +26,6 @@ class Doctor
 
   def patients
     #passes with Patient.all   . literally
-    Patient.all.collect {|doc| doc.patient}
+    appointments.map {|app| app.patient}
   end
 end
