@@ -25,7 +25,7 @@ end
 
 def doctors
   #the test passes with Doctor.all   . literally.
-  Doctor.all.collect {|app| app.doctor }
+appointments.all.map {|app| app.appointment }
 end
 
 end
